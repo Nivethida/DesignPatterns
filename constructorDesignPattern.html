@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var constructorObject = function(name,age,address){
+        this.name = name;
+        this.age = age;
+        this.address = address;
+        this.printdetails= function(){
+            console.log("Name :" +name,"Age :" +age, "Address :" +address);
+        }
+
+    }
+    var student1 = new constructorObject("Nivi",13,"No:12,Walton Street");
+    var student2 = new constructorObject("Aarya",12,"7863,walut creek");
+    console.log(student1.printdetails === student2.printdetails);
+    student1.printdetails();
+</script>
+</body>
+</html>

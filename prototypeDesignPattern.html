@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+var prototypeObject = function(name,age,address){
+this.name = name;
+this.age = age;
+this.address = address;
+}
+prototypeObject.prototype.printdetails= function(){
+    console.log("Name :" +this.name,"Age :" +this.age, "Address :" +this.address);
+}
+
+var student1 = new prototypeObject("Nivi",13,"No:12,Walton Street");
+var student2 = new prototypeObject("Aarya",12,"7863,walut creek");
+console.log(student1.printdetails === student2.printdetails);
+student1.printdetails();
+</script>
+</body>
+</html>

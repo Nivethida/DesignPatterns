@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var exposer = (function(){
+        var privateVariable = 10;
+        var privateMethod = function(){
+            console.log("This is from private method");
+        }
+        var someOtherPrivateMethod = function(){
+            console.log("This is from someother private method");
+        }
+        return{
+            publicMethod : function () {
+                console.log("From public method");
+                privateMethod();
+                console.log(privateVariable);
+            }
+        }
+    })();
+    exposer.publicMethod;
+    exposer.privateMethod();
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /**
+     * Created by madhan on 5/8/17.
+     */
+    var exposerRevealed = (function () {
+        var privateVariable = 10;
+        var privateMethod = function () {
+            console.log("This is from private method");
+        }
+        var someOtherPrivateMethod = function () {
+            console.log("This is from some other private method");
+        }
+        var methodToReveal = function () {
+            console.log("This  method reveals the content");
+        }
+        return {
+            first: someOtherPrivateMethod,
+            second: methodToReveal
+        }
+    })();
+    exposerRevealed.first();
+    exposerRevealed.second();
+
+</script>
+</body>
+</html>
